@@ -21,9 +21,20 @@ git clone --recurse-submodules https://github.com/veldhub/veld_chain__compare_to
 
 The following chain velds were used. Open the respective veld yaml file for more information.
 
+### all chains in one go
+
+This chain reuses the individual chains described below and allows batch execution of them all in
+one go.
+
+```
+docker compose -f veld_step_all.yaml up
+```
+
+### all chains sequentially
+
 **[./veld_step_1_download.yaml](./veld_step_1_download.yaml)** 
 
-Downloads a sample txt file from [Project Gutenberg](https://www.gutenberg.org/).
+Downloads a sample TEI XML from [the german ELTeC corpus](https://github.com/COST-ELTeC/ELTeC-deu/)
 
 ```
 docker compose -f veld_step_1_download.yaml up
@@ -31,17 +42,25 @@ docker compose -f veld_step_1_download.yaml up
 
 **[./veld_step_2_xmlanntools.yaml](./veld_step_2_xmlanntools.yaml)** 
 
-Runs xmlanntools to tokenize the text and persist it as TEI XML.
+Runs xmlanntools to tokenize the TEI file.
 
 ```
 docker compose -f veld_step_2_xmlanntools.yaml up
 ```
 
-**[./veld_step_3_teitook.yaml](./veld_step_3_teitook.yaml)** 
+**[./veld_step_3_teitok.yaml](./veld_step_3_teitok.yaml)** 
 
-Runs teitok-tools to tokenize the text and persist it as TEI XML.
+Runs teitok-tools to tokenize the TEI file.
 
 ```
-docker compose -f veld_step_3_teitook.yaml up
+docker compose -f veld_step_3_teitok.yaml up
+```
+
+**[./veld_step_4_jupyter_analysis.yaml](./veld_step_4_jupyter_analysis.yaml)** 
+
+Launches a jupyter notebook that compares the two enriched TEI files.
+
+```
+docker compose -f veld_step_4_jupyter_analysis.yaml up
 ```
 
