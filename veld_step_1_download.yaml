@@ -5,7 +5,7 @@ x-veld:
 
 services:
 
-  veld_downloader_1:
+  veld_step_1_download_xmlanntools:
     extends:
       file: ./code/veld_code__downloader/veld.yaml
       service: veld_downloader
@@ -15,7 +15,7 @@ services:
       url: https://raw.githubusercontent.com/COST-ELTeC/ELTeC-deu/refs/heads/master/level1/DEU100.xml
       out_file: "DEU100.xml"
 
-  veld_downloader_2:
+  veld_step_1_download_teitok:
     extends:
       file: ./code/veld_code__downloader/veld.yaml
       service: veld_downloader

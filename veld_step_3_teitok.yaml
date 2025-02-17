@@ -4,7 +4,7 @@ x-veld:
     topic:
 
 services:
-  veld_parseudpipe:
+  veld_step_3_teitok:
     extends:
       file: ./code/veld_code__teitok-tools/veld_parseudpipe.yaml
       service: veld_parseudpipe
