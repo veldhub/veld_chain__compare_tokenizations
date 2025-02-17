@@ -1,0 +1,6 @@
+[submodule "code/veld_code__teitok-tools"]
+	path = code/veld_code__teitok-tools
+	url = https://github.com/veldhub/veld_code__teitok-tools.git
+[submodule "code/veld_code__xmlanntools"]
+	path = code/veld_code__xmlanntools
+	url = https://github.com/veldhub/veld_code__xmlanntools.git
