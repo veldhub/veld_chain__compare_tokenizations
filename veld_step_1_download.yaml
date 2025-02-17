@@ -5,13 +5,23 @@ x-veld:
     additional:
 
 services:
-  veld:
+  veld_downloader_1:
     extends:
-      file: ./code/REPLACE
-      service: veld
+      file: ./code/veld_code__downloader/veld.yaml
+      service: veld_downloader
     volumes:
-      - ./data/REPLACE/:/veld/input/
-      - ./data/REPLACE/:/veld/output/
+      - ./data/xmlanntools/:/veld/output/
     environment:
-      REPLACE:
+      url: https://raw.githubusercontent.com/COST-ELTeC/ELTeC-deu/refs/heads/master/level1/DEU100.xml
+      out_file: "DEU100.xml"
+
+  veld_downloader_2:
+    extends:
+      file: ./code/veld_code__downloader/veld.yaml
+      service: veld_downloader
+    volumes:
+      - ./data/teitok/:/veld/output/
+    environment:
+      url: https://raw.githubusercontent.com/COST-ELTeC/ELTeC-deu/refs/heads/master/level1/DEU100.xml
+      out_file: "DEU100.xml"
 
