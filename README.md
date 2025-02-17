@@ -5,6 +5,9 @@ two tokenization tools: [teitok-tools](https://github.com/ufal/teitok-tools) and
 [xmlanntools](https://github.com/czcorpus/xmlanntools), using their veldified versions: 
 [veld_code__teitok-tools](https://github.com/veldhub/veld_code__teitok-tools) and 
 [veld_code__xmlanntools](https://github.com/veldhub/veld_code__xmlanntools) respectively.
+Additionally, [veld_code__downloader](https://github.com/veldhub/veld_code__downloader) is reused 
+and [veld_code__jupyter_notebook_base](https://github.com/veldhub/veld_code__jupyter_notebook_base)
+is integrated directly into this chain repo as a git subtree.
 
 ## requirements
 
