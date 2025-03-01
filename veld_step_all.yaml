@@ -49,15 +49,25 @@ services:
   veld_step_1_download_teitok:
     extends:
       file: ./veld_step_1_download.yaml
-      service: veld_step_1_download_xmlanntools
+      service: veld_step_1_download_teitok
 
-  veld_step_3_teitok:
+  veld_step_3_teitok_xmltokenize:
     extends:
       file: ./veld_step_3_teitok.yaml
-      service: veld_step_3_teitok
+      service: veld_step_3_teitok_xmltokenize
     depends_on:
       veld_step_1_download_teitok:
         condition: service_completed_successfully
+
+  veld_step_3_teitok_parseudpipe:
+    extends:
+      file: ./veld_step_3_teitok.yaml
+      service: veld_step_3_teitok_parseudpipe
+    depends_on:
+      veld_step_3_teitok_xmltokenize:
+        condition: service_completed_successfully
+
+  # - analysis --------------------------------------------
 
   veld_step_4_jupyter_analysis:
     extends:
@@ -66,6 +76,6 @@ services:
     depends_on:
       veld_step_2_xmlanntools_standoff2xml:
         condition: service_completed_successfully
-      veld_step_3_teitok:
+      veld_step_3_teitok_parseudpipe:
         condition: service_completed_successfully
 
