@@ -63,7 +63,9 @@ docker compose -f veld_step_3_teitok.yaml up
 
 **[./veld_step_4_jupyter_analysis.yaml](./veld_step_4_jupyter_analysis.yaml)** 
 
-Launches a jupyter notebook that compares the two enriched TEI files.
+Launches a jupyter notebook that compares the two enriched TEI files. After running the following
+command, the notebook can be opened at http://localhost:8888/ . The notebook is persisted at
+[./code/veld_code__jupyter_analysis/src/tokenization_analysis.ipynb](./code/veld_code__jupyter_analysis/src/tokenization_analysis.ipynb)
 
 ```
 docker compose -f veld_step_4_jupyter_analysis.yaml up
