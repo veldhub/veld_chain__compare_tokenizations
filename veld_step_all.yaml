@@ -1,7 +1,17 @@
 x-veld:
   chain:
-    description:
+    description: "This aggregated chain consists of sub chains and serves the purpose of providing 
+      a single execution point for the entire workflow reproduction of this repository. The chain 
+      services below simply load their definitions from their respective veld yaml files. See these 
+      files for more details on each workflow step. At the end of all this processing, a jupyter 
+      notebook is launched, where statistics on the previous workflows are perfmored. This 
+      notebook can be reached at http://localhost:8888/ ."
     topic:
+      - ETL
+      - Preprocessing
+      - NLP
+      - Universal Dependencies
+      - Grammatical Annotation
 
 services:
 

@@ -1,7 +1,14 @@
 x-veld:
   chain:
-    description:
+    description: "Uses a combination of tools provided mainly by teitok-tools at 
+      https://github.com/ufal/teitok-tools and veldified as code veld at 
+      https://github.com/veldhub/veld_code__teitok-tools. This chain processes an input TEI XML 
+      file by tokenizing and enriching it with udpipe and universal dependencies 
+      (https://universaldependencies.org/) metadata."
     topic:
+      - NLP
+      - Universal Dependencies
+      - Grammatical Annotation
 
 services:
 
