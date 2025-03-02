@@ -16,6 +16,7 @@ services:
       in_xml_file: DEU100.xml
       out_txt_file: DEU100.txt
       out_json_file: DEU100.json
+      text_elements: body
 
   veld_step_2_xmlanntools_tag_ud:
     extends:
